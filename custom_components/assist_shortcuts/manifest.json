@@ -1,7 +1,7 @@
 {
   "domain": "assist_shortcuts",
   "name": "Assist Shortcuts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "documentation": "https://github.com/andywarburton/assist-shortcuts",
   "issue_tracker": "https://github.com/andywarburton/assist-shortcuts/issues",
   "codeowners": ["@andywarburton"],
