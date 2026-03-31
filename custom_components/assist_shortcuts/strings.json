@@ -1,0 +1,27 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Assist Shortcuts",
+        "description": "Configure which device domains to control when an area or floor command is spoken (e.g. \"living room off\"). Entity-level commands (e.g. \"cloud off\") always target that specific entity regardless of this setting.",
+        "data": {
+          "domains": "Domains to control for area / floor commands"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Assist Shortcuts is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Assist Shortcuts options",
+        "description": "Choose which domains are toggled when you say an area or floor name.",
+        "data": {
+          "domains": "Domains to control for area / floor commands"
+        }
+      }
+    }
+  }
+}
