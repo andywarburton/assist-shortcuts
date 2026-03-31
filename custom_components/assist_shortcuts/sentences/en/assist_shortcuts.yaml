@@ -1,0 +1,17 @@
+language: "en"
+intents:
+  AssistShortcutTurnOn:
+    data:
+      - sentences:
+          - "{shortcut_name} on"
+        lists:
+          shortcut_name:
+            wildcard: true
+
+  AssistShortcutTurnOff:
+    data:
+      - sentences:
+          - "{shortcut_name} off"
+        lists:
+          shortcut_name:
+            wildcard: true
