@@ -11,10 +11,8 @@ from .intent_handler import AssistShortcutsIntentManager
 
 _LOGGER = logging.getLogger(__name__)
 
-type AssistShortcutsConfigEntry = ConfigEntry[AssistShortcutsIntentManager]
 
-
-async def async_setup_entry(hass: HomeAssistant, entry: AssistShortcutsConfigEntry) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Assist Shortcuts from a config entry."""
     domains: list[str] = entry.options.get(CONF_DOMAINS, DEFAULT_DOMAINS)
 
@@ -30,14 +28,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: AssistShortcutsConfigEnt
 
 
 async def _async_options_updated(
-    hass: HomeAssistant, entry: AssistShortcutsConfigEntry
+    hass: HomeAssistant, entry: ConfigEntry
 ) -> None:
     """Reload the integration when options are changed."""
     await hass.config_entries.async_reload(entry.entry_id)
 
 
 async def async_unload_entry(
-    hass: HomeAssistant, entry: AssistShortcutsConfigEntry
+    hass: HomeAssistant, entry: ConfigEntry
 ) -> bool:
     """Unload Assist Shortcuts and deregister all intents."""
     manager: AssistShortcutsIntentManager = entry.runtime_data

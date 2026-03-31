@@ -5,9 +5,9 @@ import logging
 import re
 from typing import Any
 
-from homeassistant.components.intent import IntentHandleError
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers import area_registry as ar, entity_registry as er, floor_registry as fr, intent
+from homeassistant.helpers import area_registry as ar, entity_registry as er, intent
+from homeassistant.helpers import floor_registry as fr
 
 from .const import DOMAIN
 
@@ -123,7 +123,7 @@ class _ShortcutIntentHandler(intent.IntentHandler):
 
         except Exception as err:  # noqa: BLE001
             _LOGGER.error("Assist Shortcuts error: %s", err)
-            raise IntentHandleError(f"Could not {service} {self._target_id}") from err
+            raise RuntimeError(f"Could not {service} {self._target_id}") from err
 
         response = intent_obj.create_response()
         response.async_set_speech(

@@ -1,7 +1,7 @@
 # Assist Shortcuts
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![GitHub release](https://img.shields.io/github/release/yourusername/assist-shortcuts.svg)](https://github.com/yourusername/assist-shortcuts/releases)
+[![GitHub release](https://img.shields.io/github/release/andywarburton/assist-shortcuts.svg)](https://github.com/andywarburton/assist-shortcuts/releases)
 
 Natural shorthand voice commands for Home Assistant Assist.
 
@@ -32,7 +32,7 @@ There is no fuzzy matching or AI involved — every sentence is an exact registe
 
 1. Open HACS in your Home Assistant instance.
 2. Click **Custom repositories** and add:
-   - **Repository:** `https://github.com/yourusername/assist-shortcuts`
+   - **Repository:** `https://github.com/andywarburton/assist-shortcuts`
    - **Type:** Integration
 3. Search for **Assist Shortcuts** in HACS and install it.
 4. Restart Home Assistant.
@@ -108,7 +108,7 @@ The first one registered wins. Add distinct aliases to your entities via **Setti
 
 ## Contributing
 
-Pull requests and issues are welcome at [github.com/yourusername/assist-shortcuts](https://github.com/yourusername/assist-shortcuts).
+Pull requests and issues are welcome at [github.com/andywarburton/assist-shortcuts](https://github.com/andywarburton/assist-shortcuts).
 
 ---
 
