@@ -23,9 +23,9 @@ TARGET_AREA = "area"
 TARGET_FLOOR = "floor"
 
 
-def _slugify(text: str) -> str:
+def _slugify(text) -> str:
     """Lower-case and collapse non-alphanumeric runs to a single space."""
-    text = text.lower().strip()
+    text = str(text).lower().strip()
     text = re.sub(r"[^a-z0-9]+", " ", text)
     return text.strip()
 
@@ -36,16 +36,16 @@ def _names_for_entity(entry: er.RegistryEntry) -> list[str]:
 
     # Friendly name (display name in HA UI)
     if entry.name:
-        names.add(_slugify(entry.name))
+        names.add(_slugify(str(entry.name)))
 
     # Original name provided by the device integration
     if entry.original_name:
-        names.add(_slugify(entry.original_name))
+        names.add(_slugify(str(entry.original_name)))
 
     # Aliases set by the user in the UI
     for alias in entry.aliases or []:
         if alias:
-            names.add(_slugify(alias))
+            names.add(_slugify(str(alias)))
 
     # Filter out empty strings
     return [n for n in names if n]
